@@ -40,7 +40,7 @@ int main(){
     departamentos["Vichada"].insert(pair<string, string>("Puerto Carreño", "Caluroso"));
 
 
-    string departamento;
+    string departamento, clima;
     vector <string> ciudades;
 
     cout << "Ingrese el departamento: ";
@@ -50,6 +50,25 @@ int main(){
         cout << "Capital: " << it->second.begin()->first << endl;
         cout << "Clima: " << it->second.begin()->second << endl;
 
+    }
+    else{
+        cout << "Departamento no encontrado" << endl;
+    }
+
+    cout << "Ingrese el clima que desea buscar: ";
+    cin >> clima;
+    for (const auto& departamento : departamentos) {
+        for (const auto& ciudad_clima : departamento.second) {
+            if (ciudad_clima.second == clima) {
+                ciudades.push_back(ciudad_clima.first);
+            }
+        }
+    }
+
+    cout << "Las ciudades con clima " << clima << " son:\n";
+    for (const auto& ciudad : ciudades) {
+        cout << ciudad << "\n";
+    }
     return 0;
 }
 
