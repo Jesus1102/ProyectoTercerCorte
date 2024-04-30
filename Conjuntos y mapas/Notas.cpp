@@ -9,6 +9,7 @@ int main(){
 
     string nombre, asignatura;
     float nota;
+    int opcion;
 
     
     while(nombre != "fin"){
@@ -26,7 +27,34 @@ int main(){
     
     }
 
+    while(true){
 
+        cout << "1. para ver las notas de un estudiante" << endl;
+        cout << "2. para el promedio de un estudiante" << endl;
+        cout << "3. para ver el promedio de una asignatura" << endl;
+        cout << "4. para salir" << endl;
+        cin >> opcion;
+
+        if(opcion == 1){
+
+        }
+        else if(opcion == 2){
+
+        }
+        else if(opcion == 3){
+
+        }
+        else if (opcion == 4){
+            break;
+        }
+        else{
+            cout << "Opcion invalida" << endl;
+        }
+
+
+
+
+    }
 
 
 }
