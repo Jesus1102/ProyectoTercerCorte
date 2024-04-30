@@ -29,14 +29,22 @@ int main(){
 
     while(true){
 
-        cout << "1. para ver las notas de un estudiante" << endl;
+        cout << "1. para ver las notas de un estudiante en una asignatura" << endl;
         cout << "2. para el promedio de un estudiante" << endl;
         cout << "3. para ver el promedio de una asignatura" << endl;
         cout << "4. para salir" << endl;
         cin >> opcion;
 
         if(opcion == 1){
+            cout << "Ingrese el nombre del estudiante: ";
+            cin >> nombre;
+            cout << "Ingrese la asignatura: ";
+            cin >> asignatura;
 
+            auto it = notas.find(nombre);
+            if(it != notas.end()){
+                auto it2 = it->second.find(asignatura);
+            } 
         }
         else if(opcion == 2){
 
