@@ -55,7 +55,7 @@ int main(){
         cout << "Departamento no encontrado" << endl;
     }
 
-    cout << "Ingrese el clima que desea buscar: ";
+    cout << "Ingrese el clima que desea buscar: " << endl;
     cin >> clima;
     for (const auto& departamento : departamentos) {
         for (const auto& ciudad_clima : departamento.second) {
@@ -65,9 +65,9 @@ int main(){
         }
     }
 
-    cout << "Las ciudades con clima " << clima << " son:\n";
+    cout << "Las ciudades con clima " << clima << " son: " << endl;
     for (const auto& ciudad : ciudades) {
-        cout << ciudad << "\n";
+        cout << ciudad << endl;
     }
     return 0;
 }
