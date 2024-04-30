@@ -31,7 +31,7 @@ int main(){
                 notas[nombre].insert(pair<string, float>(asignatura, nota));
             }
         }
-        if(opcion == 2){
+        else if(opcion == 2){
             cout << "Ingrese el nombre del estudiante: ";
             cin >> nombre;
             cout << "Ingrese la asignatura: ";
@@ -52,12 +52,41 @@ int main(){
             } 
         }
         else if(opcion == 3){
-
+            cout << "Ingrese el nombre del estudiante: ";
+            cin >> nombre;
+            auto it = notas.find(nombre);
+            if(it != notas.end()){
+                float suma = 0;
+                for(auto it2 = it->second.begin(); it2 != it->second.end(); it2++){
+                    suma += it2->second;
+                }
+                cout << "El promedio de " << nombre << " es " << suma / it->second.size() << endl;
+            }
+            else{
+                cout << "Estudiante no encontrado" << endl;
+            }
         }
         else if(opcion == 4){
-
+            cout << "Ingrese la asignatura: ";
+            cin >> asignatura;
+            float suma = 0;
+            int cantidad = 0;
+            for(auto it = notas.begin(); it != notas.end(); it++){
+                auto it2 = it->second.find(asignatura);
+                if(it2 != it->second.end()){
+                    suma += it2->second;
+                    cantidad++;
+                }
+            }
+            if(cantidad > 0){
+                cout << "El promedio de " << asignatura << " es " << suma / cantidad << endl;
+            }
+            else{
+                cout << "Asignatura no encontrada" << endl;
+            }
         }
         else if(opcion == 5){
+            cout << "Adios" << endl;
             break;
         }
         else{
