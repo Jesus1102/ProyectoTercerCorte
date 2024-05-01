@@ -28,7 +28,13 @@ int main(){
             turnos.push(to_string(cedula) + " " + to_string(turno));
         }
         else if(opcion == 2){
-
+            while(!turnos.empty()){
+                cout << turnos.front() << endl;
+                turnos.pop();
+            }
+            if(turnos.empty()){
+                cout << "No hay turnos registrados" << endl;
+            }
         }
         else{
             cout << "Opcion invalida" << endl;
