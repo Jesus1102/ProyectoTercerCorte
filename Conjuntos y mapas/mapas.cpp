@@ -1,7 +1,8 @@
 #include<iostream>
-using namespace std;
+
 #include <map>
 
+using namespace std;
 //Utilizamos la clase map
 //Clave:Valor
 int main (){
