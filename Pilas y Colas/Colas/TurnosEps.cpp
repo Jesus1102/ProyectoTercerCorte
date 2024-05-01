@@ -14,6 +14,7 @@ int main(){
         cout << "Bienvenido al sistema de turno de la EPS" << endl;
         cout << "1. para registra un turno" << endl;
         cout << "2. para ver la lista de turnos" << endl;
+        cout << "0. para salir" << endl;
 
         cin >> opcion;
         if(opcion == 1){
@@ -36,6 +37,10 @@ int main(){
                 cout << "No hay turnos registrados" << endl;
             }
         }
+        else if(opcion == 0){
+            break;
+        }
+        
         else{
             cout << "Opcion invalida" << endl;
         }
