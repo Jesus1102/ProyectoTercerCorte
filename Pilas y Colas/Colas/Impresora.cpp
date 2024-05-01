@@ -45,7 +45,7 @@ int main(){
         }
         else if(opcion == 3){
             
-            cout << "Impresiones hechas:" << endl;
+            cout << "Impresiones hechas de las mas reciente a la mas antigua:" << endl;
             while(!impresionesHechas.empty()){
                 cout << impresionesHechas.top() << endl;
                 impresionesHechas.pop();
